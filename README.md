@@ -1,10 +1,15 @@
 # L-GEVITY Developers
 
-Public developer contract and integration examples for the L-GEVITY REST API.
+The L-GEVITY API lets backend applications submit biomarker measurements and
+receive structured longevity analysis over HTTP JSON. Integrations can fetch the
+public biomarker manifest, create a biometric assessment, and request ranked
+intervention recommendations from the L-GEVITY intervention catalogue.
 
-The API gives backend integrations access to the L-GEVITY biometric and
-intervention engine products through a stable HTTP JSON facade. Engine source,
-account management, billing internals, and API-key management stay private.
+Use the API when you want to add L-GEVITY engine output to another product,
+dashboard, coach workflow, lab portal, or internal health application without
+embedding the engine itself. The API returns machine-readable results; account
+management, API-key creation, billing, and engine source code stay outside this
+public repository.
 
 ## Base URLs
 
