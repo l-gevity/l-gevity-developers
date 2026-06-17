@@ -1,7 +1,6 @@
 POST https://api.acceptance.l-gevity.nl/v1/biometric-assessments
 Content-Type: application/json
 X-Api-Key: YOUR_API_KEY
-Idempotency-Key: 2f8c6f3e-5db7-4f3c-8bb8-18c80f33a111
 
 {
   "biomarkers": [
@@ -22,4 +21,3 @@ Idempotency-Key: 2f8c6f3e-5db7-4f3c-8bb8-18c80f33a111
     { "code": "sleepHours", "value": 7, "unit": "bool" }
   ]
 }
-

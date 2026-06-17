@@ -76,7 +76,6 @@ Required headers:
 ```text
 Content-Type: application/json
 X-Api-Key: YOUR_API_KEY
-Idempotency-Key: 2f8c6f3e-5db7-4f3c-8bb8-18c80f33a111
 ```
 
 Request:
@@ -85,7 +84,6 @@ Request:
 curl https://api.acceptance.l-gevity.nl/v1/biometric-assessments \
   -H "Content-Type: application/json" \
   -H "X-Api-Key: YOUR_API_KEY" \
-  -H "Idempotency-Key: 2f8c6f3e-5db7-4f3c-8bb8-18c80f33a111" \
   --data-binary "@examples/curl/biometric-assessment.payload.json"
 ```
 
@@ -119,8 +117,7 @@ Request body:
 }
 ```
 
-Successful responses return `201`, a `Location` header, and an
-`Idempotency-Replayed` header.
+Successful responses return `201`, a `Location` header, and a JSON body.
 
 Response fixture:
 
@@ -137,7 +134,6 @@ Required headers:
 ```text
 Content-Type: application/json
 X-Api-Key: YOUR_API_KEY
-Idempotency-Key: a7cdb0e1-1ad8-49e9-a487-29acdbabf8f1
 ```
 
 Request:
@@ -146,7 +142,6 @@ Request:
 curl https://api.acceptance.l-gevity.nl/v1/intervention-recommendations \
   -H "Content-Type: application/json" \
   -H "X-Api-Key: YOUR_API_KEY" \
-  -H "Idempotency-Key: a7cdb0e1-1ad8-49e9-a487-29acdbabf8f1" \
   --data-binary "@examples/curl/intervention-recommendation.payload.json"
 ```
 
@@ -168,8 +163,7 @@ Request body:
 }
 ```
 
-Successful responses return `201`, a `Location` header, and an
-`Idempotency-Replayed` header.
+Successful responses return `201`, a `Location` header, and a JSON body.
 
 Response fixture:
 

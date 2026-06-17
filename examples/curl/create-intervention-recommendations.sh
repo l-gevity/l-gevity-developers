@@ -4,11 +4,8 @@ set -euo pipefail
 : "${LGEVITY_API_KEY:?Set LGEVITY_API_KEY before running this example.}"
 
 BASE_URL="${LGEVITY_BASE_URL:-https://api.acceptance.l-gevity.nl}"
-IDEMPOTENCY_KEY="${LGEVITY_IDEMPOTENCY_KEY:-$(uuidgen)}"
 
 curl "${BASE_URL}/v1/intervention-recommendations" \
   -H "Content-Type: application/json" \
   -H "X-Api-Key: ${LGEVITY_API_KEY}" \
-  -H "Idempotency-Key: ${IDEMPOTENCY_KEY}" \
   --data-binary "@intervention-recommendation.payload.json"
-

@@ -66,17 +66,6 @@ https://l-gevity.nl/profile.html#api-keys
 
 The manifest and health endpoints are public and do not require an API key.
 
-## Idempotency
-
-Each `POST` request requires an `Idempotency-Key` header:
-
-```text
-Idempotency-Key: 2f8c6f3e-5db7-4f3c-8bb8-18c80f33a111
-```
-
-Use the same key only when retrying the exact same request body. A replay returns
-the original response and does not count as a new product call.
-
 ## Quick Start
 
 Fetch the public manifest:
