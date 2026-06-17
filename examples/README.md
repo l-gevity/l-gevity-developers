@@ -1,4 +1,4 @@
-# Request Examples
+# Examples
 
 These examples use the acceptance API by default:
 
@@ -11,6 +11,8 @@ Use the production base URL when your integration is ready:
 ```text
 https://api.l-gevity.nl
 ```
+
+Run commands from the repository root unless a command says otherwise.
 
 ## GET /health
 

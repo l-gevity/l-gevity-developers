@@ -26,10 +26,10 @@ The OpenAPI contract is published at:
 openapi/public-api.v1.openapi.json
 ```
 
-Request examples are published at:
+Examples and curl payloads are published at:
 
 ```text
-docs/request-examples.md
+examples/README.md
 ```
 
 The complete manifest example is published at:
