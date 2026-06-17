@@ -1,0 +1,794 @@
+{
+  "id": "bas_748e599b-0945-46ae-99af-caa4cf83c0b1",
+  "createdAt": "2026-06-17T00:00:00.000Z",
+  "productId": "biometric-engine-v1",
+  "billableUnits": 1,
+  "biologicalValue": 20,
+  "dataCurrency": 100,
+  "riskBands": [
+    {
+      "domain": "diastolicBP",
+      "hazardRatio": 1.23
+    },
+    {
+      "domain": "bodyComposition",
+      "hazardRatio": 1.19
+    },
+    {
+      "domain": "lgevityBloedTest",
+      "hazardRatio": 1.19
+    },
+    {
+      "domain": "stress",
+      "hazardRatio": 1.11
+    },
+    {
+      "domain": "hdlCholesterol",
+      "hazardRatio": 1.1
+    },
+    {
+      "domain": "lipidology",
+      "hazardRatio": 1.09
+    },
+    {
+      "domain": "hsCRP",
+      "hazardRatio": 1.06
+    },
+    {
+      "domain": "waistToHeightRatio",
+      "hazardRatio": 1.04
+    },
+    {
+      "domain": "ldlCholesterol",
+      "hazardRatio": 1
+    },
+    {
+      "domain": "hba1c",
+      "hazardRatio": 1
+    },
+    {
+      "domain": "crp",
+      "hazardRatio": 1
+    },
+    {
+      "domain": "synergyPlaqueRupture",
+      "hazardRatio": 1
+    },
+    {
+      "domain": "synergyAIP",
+      "hazardRatio": 1
+    },
+    {
+      "domain": "synergyChronicInflammation",
+      "hazardRatio": 1
+    },
+    {
+      "domain": "synergyMetabolicInflexibility",
+      "hazardRatio": 1
+    },
+    {
+      "domain": "synergyPlaqueVulnerability",
+      "hazardRatio": 1
+    },
+    {
+      "domain": "synergyJunkVolumeMetabolism",
+      "hazardRatio": 1
+    },
+    {
+      "domain": "synergyCatabolicOvertraining",
+      "hazardRatio": 1
+    },
+    {
+      "domain": "synergyAntioxidantOverload",
+      "hazardRatio": 1
+    },
+    {
+      "domain": "synergyBiomechanicalWear",
+      "hazardRatio": 1
+    }
+  ],
+  "engineResult": {
+    "metrics": {
+      "birthYear": 1984,
+      "age": 42,
+      "gender": "male",
+      "height": 180,
+      "bodyWeight": 86,
+      "waistCircumference": 94,
+      "systolicBP": 132,
+      "diastolicBP": 84,
+      "ldlCholesterol": 3.1,
+      "hdlCholesterol": 1.4,
+      "triglycerides": 1.2,
+      "hba1c": 5.5,
+      "hsCRP": 1.8,
+      "vo2max": 42,
+      "dailySteps": 7200,
+      "sleepHours": 7,
+      "crp": 1.8,
+      "muscleMass": 59.8,
+      "waistToHeightRatio": 0.52,
+      "synergyPlaqueRupture": 0,
+      "synergyAIP": 0,
+      "synergyChronicInflammation": 0,
+      "synergyMetabolicInflexibility": 0,
+      "synergyPlaqueVulnerability": 0,
+      "synergyJunkVolumeMetabolism": 0,
+      "synergyCatabolicOvertraining": 0,
+      "synergyAntioxidantOverload": 0,
+      "synergyBiomechanicalWear": 0,
+      "phenotypeLeanAthlete": 0,
+      "phenotypeFrailty": 0,
+      "phenotypePowerAthlete": 0,
+      "phenotypeMetabolicSyndrome": 0,
+      "phenotypeBenignLDL": 0,
+      "phenotypeAtherogenicLDL": 0,
+      "phenotypeAthleteBP": 0,
+      "phenotypeAutonomicFrailty": 0,
+      "phenotypeEliteLipids": 0,
+      "phenotypeHealthyHighHDL": 0,
+      "phenotypeSmokerAntioxidant": 0,
+      "phenologicalAge": 41.4
+    },
+    "metadata": {
+      "calculationTimestamp": 1781654400000,
+      "age": 42,
+      "ageGroup": "middle",
+      "gender": "male"
+    },
+    "riskReductions": {
+      "systolicBP": 4,
+      "diastolicBP": -23,
+      "ldlCholesterol": 0,
+      "hdlCholesterol": -10,
+      "triglycerides": 1,
+      "hba1c": 0,
+      "hsCRP": -6,
+      "vo2max": 12,
+      "dailySteps": 43,
+      "crp": 0,
+      "muscleMass": 60,
+      "waistToHeightRatio": -4,
+      "synergyPlaqueRupture": 0,
+      "synergyAIP": 0,
+      "synergyChronicInflammation": 0,
+      "synergyMetabolicInflexibility": 0,
+      "synergyPlaqueVulnerability": 0,
+      "synergyJunkVolumeMetabolism": 0,
+      "synergyCatabolicOvertraining": 0,
+      "synergyAntioxidantOverload": 0,
+      "synergyBiomechanicalWear": 0,
+      "phenotypeLeanAthlete": 0,
+      "phenotypeFrailty": 0,
+      "phenotypePowerAthlete": 0,
+      "phenotypeMetabolicSyndrome": 0,
+      "phenotypeBenignLDL": 0,
+      "phenotypeAtherogenicLDL": 0,
+      "phenotypeAthleteBP": 0,
+      "phenotypeAutonomicFrailty": 0,
+      "phenotypeEliteLipids": 0,
+      "phenotypeHealthyHighHDL": 0,
+      "phenotypeSmokerAntioxidant": 0,
+      "cardioRespiratory": 80,
+      "metabolicControl": 2,
+      "lipidology": -9,
+      "bodyComposition": -19,
+      "stress": -11,
+      "lgevityBloedTest": -19,
+      "cognitiveDecline": 80,
+      "bloodPressureControl": 22,
+      "diabetesManagement": 28,
+      "phenologicalAge": 5,
+      "allostaticLoad": 1.6747082577211585
+    },
+    "scores": {
+      "totalHealth": 20,
+      "cardiovascular": 40,
+      "metabolic": 23,
+      "immune": 30,
+      "physiologicBalance": 42,
+      "physiologicCompleteness": 34,
+      "physiologicTier1": 0,
+      "physiologicTier2": 2,
+      "physiologicTier3": 6,
+      "fitnessCompleteness": 0,
+      "cognitiveCompleteness": 0,
+      "phenologicalAge": 41.4,
+      "reserveCoverage": 11,
+      "allostaticLoad": 67,
+      "allostaticLoadClinical": 75,
+      "dataQuality": 36
+    },
+    "percentiles": {
+      "height": 39,
+      "bodyWeight": 57,
+      "systolicBP": 12,
+      "diastolicBP": 25,
+      "ldlCholesterol": 45,
+      "hdlCholesterol": 63,
+      "triglycerides": 58,
+      "hba1c": 20,
+      "hsCRP": 30,
+      "vo2max": 72,
+      "dailySteps": 27,
+      "muscleMass": 100,
+      "waistToHeightRatio": 16
+    },
+    "ageDeltas": {
+      "systolicBP": -0.5,
+      "diastolicBP": 2.4,
+      "ldlCholesterol": 0,
+      "hdlCholesterol": 1.1,
+      "triglycerides": -0.1,
+      "hba1c": 0,
+      "hsCRP": 0.7,
+      "vo2max": -1.5,
+      "dailySteps": -6.5,
+      "crp": 0,
+      "muscleMass": -10.5,
+      "waistToHeightRatio": 0.5,
+      "synergyPlaqueRupture": 0,
+      "synergyAIP": 0,
+      "synergyChronicInflammation": 0,
+      "synergyMetabolicInflexibility": 0,
+      "synergyPlaqueVulnerability": 0,
+      "synergyJunkVolumeMetabolism": 0,
+      "synergyCatabolicOvertraining": 0,
+      "synergyAntioxidantOverload": 0,
+      "synergyBiomechanicalWear": 0,
+      "phenotypeLeanAthlete": 0,
+      "phenotypeFrailty": 0,
+      "phenotypePowerAthlete": 0,
+      "phenotypeMetabolicSyndrome": 0,
+      "phenotypeBenignLDL": 0,
+      "phenotypeAtherogenicLDL": 0,
+      "phenotypeAthleteBP": 0,
+      "phenotypeAutonomicFrailty": 0,
+      "phenotypeEliteLipids": 0,
+      "phenotypeHealthyHighHDL": 0,
+      "phenotypeSmokerAntioxidant": 0,
+      "cardioRespiratory": -18.5,
+      "metabolicControl": -0.2,
+      "lipidology": 0.9,
+      "bodyComposition": 2,
+      "stress": 1.2,
+      "lgevityBloedTest": 2,
+      "phenologicalAge": -0.6
+    },
+    "impactScores": {
+      "systolicBP": -2.7,
+      "diastolicBP": 3.8,
+      "ldlCholesterol": 0,
+      "hdlCholesterol": 1.7,
+      "triglycerides": -0.3,
+      "hba1c": 0,
+      "hsCRP": 4.2,
+      "vo2max": -13.5,
+      "dailySteps": -46.8,
+      "crp": 0,
+      "muscleMass": -22.9,
+      "waistToHeightRatio": 4.1,
+      "synergyPlaqueRupture": 0,
+      "synergyAIP": 0,
+      "synergyChronicInflammation": 0,
+      "synergyMetabolicInflexibility": 0,
+      "synergyPlaqueVulnerability": 0,
+      "synergyJunkVolumeMetabolism": 0,
+      "synergyCatabolicOvertraining": 0,
+      "synergyAntioxidantOverload": 0,
+      "synergyBiomechanicalWear": 0,
+      "phenotypeLeanAthlete": 0,
+      "phenotypeFrailty": 0,
+      "phenotypePowerAthlete": 0,
+      "phenotypeMetabolicSyndrome": 0,
+      "phenotypeBenignLDL": 0,
+      "phenotypeAtherogenicLDL": 0,
+      "phenotypeAthleteBP": 0,
+      "phenotypeAutonomicFrailty": 0,
+      "phenotypeEliteLipids": 0,
+      "phenotypeHealthyHighHDL": 0,
+      "phenotypeSmokerAntioxidant": 0,
+      "cardioRespiratory": -76.6,
+      "metabolicControl": -0.8,
+      "lipidology": 3.4,
+      "bodyComposition": 6.9,
+      "stress": 4.3,
+      "lgevityBloedTest": 7.9
+    },
+    "oddsRatios": {
+      "cognitiveDecline": 0.2
+    },
+    "deviationFromOptimal": {
+      "systolicBP": 0,
+      "diastolicBP": 4,
+      "ldlCholesterol": 0,
+      "hdlCholesterol": -0.1,
+      "triglycerides": 0,
+      "hba1c": 0,
+      "hsCRP": 0.05,
+      "vo2max": 0,
+      "dailySteps": 0,
+      "muscleMass": 0,
+      "waistToHeightRatio": 0.02,
+      "synergyPlaqueRupture": 0,
+      "synergyAIP": 0,
+      "synergyChronicInflammation": 0,
+      "synergyMetabolicInflexibility": 0,
+      "synergyPlaqueVulnerability": 0,
+      "synergyJunkVolumeMetabolism": 0,
+      "synergyCatabolicOvertraining": 0,
+      "synergyAntioxidantOverload": 0,
+      "synergyBiomechanicalWear": 0,
+      "phenotypeLeanAthlete": 0,
+      "phenotypeFrailty": 0,
+      "phenotypePowerAthlete": 0,
+      "phenotypeMetabolicSyndrome": 0,
+      "phenotypeBenignLDL": 0,
+      "phenotypeAtherogenicLDL": 0,
+      "phenotypeAthleteBP": 0,
+      "phenotypeAutonomicFrailty": 0,
+      "phenotypeEliteLipids": 0,
+      "phenotypeHealthyHighHDL": 0,
+      "phenotypeSmokerAntioxidant": 0
+    },
+    "expectedDurations": {
+      "cardioRespiratory": 12,
+      "metabolicControl": 12,
+      "lipidology": 16,
+      "bodyComposition": 12,
+      "stress": 10,
+      "lgevityBloedTest": 12
+    },
+    "virtualBiomarkerResults": {
+      "cardioRespiratory": {
+        "hr": 0.2,
+        "rrr": 80,
+        "componentsUsed": 4,
+        "componentsAvailable": 11,
+        "baseComponents": 11,
+        "coverage": 36.4,
+        "categoryHRs": {
+          "cardiovascular": 0.81
+        },
+        "categoryWeights": {
+          "cardiovascular": 11.55
+        },
+        "tierDistribution": {
+          "1": 3,
+          "2": 1,
+          "3": 0
+        },
+        "effectiveWeights": {
+          "vo2max": 4.5,
+          "systolicBP": 2.5,
+          "diastolicBP": 1.0499999999999998,
+          "dailySteps": 3.5
+        },
+        "reliable": true,
+        "activeFactors": [
+          "vo2max",
+          "systolicBP",
+          "diastolicBP",
+          "dailySteps"
+        ]
+      },
+      "metabolicControl": {
+        "hr": 0.983,
+        "rrr": 2,
+        "componentsUsed": 2,
+        "componentsAvailable": 6,
+        "baseComponents": 6,
+        "coverage": 33.3,
+        "categoryHRs": {
+          "metabolic": 1,
+          "lipids": 0.99
+        },
+        "categoryWeights": {
+          "metabolic": 4,
+          "lipids": 1.75
+        },
+        "tierDistribution": {
+          "1": 1,
+          "2": 1,
+          "3": 0
+        },
+        "effectiveWeights": {
+          "hba1c": 4,
+          "triglycerides": 1.75
+        },
+        "reliable": true,
+        "activeFactors": [
+          "hba1c",
+          "triglycerides"
+        ]
+      },
+      "lipidology": {
+        "hr": 1.086,
+        "rrr": -9,
+        "componentsUsed": 3,
+        "componentsAvailable": 8,
+        "baseComponents": 8,
+        "coverage": 37.5,
+        "categoryHRs": {
+          "lipids": 1.02
+        },
+        "categoryWeights": {
+          "lipids": 4.199999999999999
+        },
+        "tierDistribution": {
+          "1": 0,
+          "2": 3,
+          "3": 0
+        },
+        "effectiveWeights": {
+          "ldlCholesterol": 1.4,
+          "triglycerides": 1.75,
+          "hdlCholesterol": 1.0499999999999998
+        },
+        "reliable": true,
+        "activeFactors": [
+          "ldlCholesterol",
+          "triglycerides",
+          "hdlCholesterol"
+        ]
+      },
+      "bodyComposition": {
+        "hr": 1.188,
+        "rrr": -19,
+        "componentsUsed": 1,
+        "componentsAvailable": 7,
+        "baseComponents": 7,
+        "coverage": 57.1,
+        "categoryHRs": {
+          "bodyComposition": 1.044
+        },
+        "categoryWeights": {
+          "bodyComposition": 4
+        },
+        "tierDistribution": {
+          "1": 1,
+          "2": 0,
+          "3": 0
+        },
+        "effectiveWeights": {
+          "waistToHeightRatio": 4
+        },
+        "reliable": true,
+        "activeFactors": [
+          "waistToHeightRatio"
+        ]
+      },
+      "stress": {
+        "hr": 1.114,
+        "rrr": -11,
+        "componentsUsed": 2,
+        "componentsAvailable": 5,
+        "baseComponents": 5,
+        "coverage": 40,
+        "categoryHRs": {
+          "cardiovascular": 1.031
+        },
+        "categoryWeights": {
+          "cardiovascular": 3.55
+        },
+        "tierDistribution": {
+          "1": 1,
+          "2": 1,
+          "3": 0
+        },
+        "effectiveWeights": {
+          "systolicBP": 2.5,
+          "diastolicBP": 1.0499999999999998
+        },
+        "reliable": true,
+        "activeFactors": [
+          "systolicBP",
+          "diastolicBP"
+        ]
+      },
+      "lgevityBloedTest": {
+        "hr": 1.191,
+        "rrr": -19,
+        "componentsUsed": 2,
+        "componentsAvailable": 16,
+        "baseComponents": 16,
+        "coverage": 12.5,
+        "categoryHRs": {
+          "inflammation": 1.06,
+          "metabolic": 1
+        },
+        "categoryWeights": {
+          "inflammation": 3,
+          "metabolic": 4
+        },
+        "tierDistribution": {
+          "1": 2,
+          "2": 0,
+          "3": 0
+        },
+        "effectiveWeights": {
+          "hsCRP": 3,
+          "hba1c": 4
+        },
+        "reliable": true,
+        "activeFactors": [
+          "hsCRP",
+          "hba1c"
+        ]
+      }
+    },
+    "virtualBiomarkerPercentiles": {
+      "cardioRespiratory": {
+        "percentile": 32.6,
+        "componentsUsed": 4,
+        "componentsAvailable": 11,
+        "coverage": 36.4,
+        "reliable": true,
+        "activeFactors": [
+          "vo2max",
+          "systolicBP",
+          "diastolicBP",
+          "dailySteps"
+        ]
+      },
+      "metabolicControl": {
+        "percentile": 30.1,
+        "componentsUsed": 2,
+        "componentsAvailable": 6,
+        "coverage": 33.3,
+        "reliable": true,
+        "activeFactors": [
+          "hba1c",
+          "triglycerides"
+        ]
+      },
+      "lipidology": {
+        "percentile": 54.4,
+        "componentsUsed": 3,
+        "componentsAvailable": 8,
+        "coverage": 37.5,
+        "reliable": true,
+        "activeFactors": [
+          "ldlCholesterol",
+          "triglycerides",
+          "hdlCholesterol"
+        ]
+      },
+      "bodyComposition": {
+        "percentile": 22.9,
+        "componentsUsed": 3,
+        "componentsAvailable": 7,
+        "coverage": 42.9,
+        "reliable": true,
+        "activeFactors": [
+          "waistToHeightRatio",
+          "bodyWeight",
+          "height"
+        ]
+      },
+      "stress": {
+        "percentile": 15.8,
+        "componentsUsed": 2,
+        "componentsAvailable": 5,
+        "coverage": 40,
+        "reliable": true,
+        "activeFactors": [
+          "systolicBP",
+          "diastolicBP"
+        ]
+      },
+      "lgevityBloedTest": {
+        "percentile": 23.8,
+        "componentsUsed": 2,
+        "componentsAvailable": 16,
+        "coverage": 12.5,
+        "reliable": true,
+        "activeFactors": [
+          "hsCRP",
+          "hba1c"
+        ]
+      }
+    },
+    "pheno": {
+      "algorithm": "VB-Category-Partial",
+      "hrCombined": 0.9499773425621051,
+      "uncertainty": {
+        "lower": 41,
+        "upper": 41.8,
+        "range": 0.9,
+        "confidence": 0.36,
+        "logSD": 0.0195,
+        "logCI95": 0.0382
+      },
+      "phenoDimensions": {
+        "cardioRespiratory": {
+          "score": 123,
+          "categoryHRs": {
+            "cardiovascular": 0.81
+          }
+        },
+        "metabolicControl": {
+          "score": 100,
+          "categoryHRs": {
+            "metabolic": 1,
+            "lipids": 0.99
+          }
+        },
+        "lipidology": {
+          "score": 98,
+          "categoryHRs": {
+            "lipids": 1.02
+          }
+        },
+        "bodyComposition": {
+          "score": 96,
+          "categoryHRs": {
+            "bodyComposition": 1.044
+          }
+        }
+      },
+      "phenoDomainDeltas": {
+        "cardioRespiratory": -2.4,
+        "metabolicControl": 0,
+        "lipidology": 0.2,
+        "bodyComposition": 0.5
+      },
+      "categoryBreakdown": {
+        "cardioRespiratory": 0.81,
+        "metabolicControl": 0.9969458754875783,
+        "lipidology": 1.02,
+        "bodyComposition": 1.044
+      },
+      "topContributors": [
+        {
+          "metric": "cardioRespiratory",
+          "ageDelta": -2.4,
+          "tier": 1,
+          "direction": "improving"
+        },
+        {
+          "metric": "bodyComposition",
+          "ageDelta": 0.5,
+          "tier": 1,
+          "direction": "accelerating"
+        },
+        {
+          "metric": "lipidology",
+          "ageDelta": 0.2,
+          "tier": 1,
+          "direction": "accelerating"
+        },
+        {
+          "metric": "metabolicControl",
+          "ageDelta": 0,
+          "tier": 1,
+          "direction": "improving"
+        }
+      ],
+      "perMetricContribution": [
+        {
+          "metric": "cardioRespiratory",
+          "tier": 1,
+          "weight": 0.247,
+          "hr": 0.81,
+          "ageDelta": -2.4,
+          "weightedAgeDelta": -2.4,
+          "impact": 2.4
+        },
+        {
+          "metric": "bodyComposition",
+          "tier": 1,
+          "weight": 0.31,
+          "hr": 1.044,
+          "ageDelta": 0.5,
+          "weightedAgeDelta": 0.5,
+          "impact": 0.5
+        },
+        {
+          "metric": "lipidology",
+          "tier": 1,
+          "weight": 0.229,
+          "hr": 1.02,
+          "ageDelta": 0.2,
+          "weightedAgeDelta": 0.2,
+          "impact": 0.2
+        },
+        {
+          "metric": "metabolicControl",
+          "tier": 1,
+          "weight": 0.215,
+          "hr": 0.997,
+          "ageDelta": 0,
+          "weightedAgeDelta": 0,
+          "impact": 0
+        }
+      ]
+    },
+    "tierInfo": {
+      "acm": {
+        "tier1Count": 26,
+        "tier2Count": 4,
+        "tier3Count": 2,
+        "multipliers": {
+          "1": 1,
+          "2": 0.5,
+          "3": 0.3
+        },
+        "topContributors": [
+          {
+            "factor": "systolicBP",
+            "tier": 1,
+            "effectiveWeight": "2.50",
+            "ageDelta": -0.5
+          },
+          {
+            "factor": "diastolicBP",
+            "tier": 2,
+            "effectiveWeight": "0.75",
+            "ageDelta": 2.4
+          },
+          {
+            "factor": "ldlCholesterol",
+            "tier": 2,
+            "effectiveWeight": "1.00",
+            "ageDelta": 0
+          },
+          {
+            "factor": "hdlCholesterol",
+            "tier": 2,
+            "effectiveWeight": "0.75",
+            "ageDelta": 1.1
+          },
+          {
+            "factor": "triglycerides",
+            "tier": 2,
+            "effectiveWeight": "1.25",
+            "ageDelta": -0.1
+          }
+        ]
+      },
+      "virtualBiomarkers": {
+        "1": 8,
+        "2": 6,
+        "3": 0
+      }
+    },
+    "derivedBiometrics": {
+      "crp": 1.8,
+      "muscleMass": 59.8,
+      "waistToHeightRatio": 0.52,
+      "synergyPlaqueRupture": 0,
+      "synergyAIP": 0,
+      "synergyChronicInflammation": 0,
+      "synergyMetabolicInflexibility": 0,
+      "synergyPlaqueVulnerability": 0,
+      "synergyJunkVolumeMetabolism": 0,
+      "synergyCatabolicOvertraining": 0,
+      "synergyAntioxidantOverload": 0,
+      "synergyBiomechanicalWear": 0,
+      "phenotypeLeanAthlete": 0,
+      "phenotypeFrailty": 0,
+      "phenotypePowerAthlete": 0,
+      "phenotypeMetabolicSyndrome": 0,
+      "phenotypeBenignLDL": 0,
+      "phenotypeAtherogenicLDL": 0,
+      "phenotypeAthleteBP": 0,
+      "phenotypeAutonomicFrailty": 0,
+      "phenotypeEliteLipids": 0,
+      "phenotypeHealthyHighHDL": 0,
+      "phenotypeSmokerAntioxidant": 0,
+      "phenologicalAge": 41.4,
+      "reserveCoverage": 11,
+      "allostaticLoad": 67,
+      "allostaticLoadClinical": 75,
+      "dataQuality": 36
+    },
+    "expirations": {
+      "phenologicalAge": "2026-09-15T00:00:00.000Z",
+      "reserveCoverage": "2026-09-15T00:00:00.000Z",
+      "allostaticLoad": "2026-09-15T00:00:00.000Z",
+      "allostaticLoadClinical": "2026-09-15T00:00:00.000Z",
+      "dataQuality": "2026-09-15T00:00:00.000Z"
+    }
+  }
+}

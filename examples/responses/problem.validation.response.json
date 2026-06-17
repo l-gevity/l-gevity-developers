@@ -1,0 +1,7 @@
+{
+  "type": "https://api.l-gevity.nl/problems/422",
+  "title": "Invalid request body",
+  "status": 422,
+  "detail": "biomarkers: Required",
+  "requestId": "req_01JZ7Z8Y2Y5V8A9T7P6Q5R4S3T"
+}

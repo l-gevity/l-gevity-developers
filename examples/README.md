@@ -14,6 +14,18 @@ https://api.l-gevity.nl
 
 Run commands from the repository root unless a command says otherwise.
 
+Runnable HTTP request files live in:
+
+```text
+examples/http/
+```
+
+Response fixtures live in:
+
+```text
+examples/responses/
+```
+
 ## GET /health
 
 Checks whether the API facade is reachable.
@@ -22,13 +34,16 @@ Checks whether the API facade is reachable.
 curl https://api.acceptance.l-gevity.nl/health
 ```
 
+Request file:
+
+```text
+examples/http/health.http
+```
+
 Example response:
 
-```json
-{
-  "status": "ok",
-  "checkedAt": "2026-06-17T00:00:00.000Z"
-}
+```text
+examples/responses/health.response.json
 ```
 
 ## GET /v1/manifest
@@ -40,7 +55,13 @@ not require an API key.
 curl https://api.acceptance.l-gevity.nl/v1/manifest
 ```
 
-Use the complete static example in:
+Request file:
+
+```text
+examples/http/manifest.http
+```
+
+Use the complete static response example in:
 
 ```text
 docs/complete-manifest.md
@@ -66,6 +87,12 @@ curl https://api.acceptance.l-gevity.nl/v1/biometric-assessments \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Idempotency-Key: 2f8c6f3e-5db7-4f3c-8bb8-18c80f33a111" \
   --data-binary "@examples/curl/biometric-assessment.payload.json"
+```
+
+Request file:
+
+```text
+examples/http/create-biometric-assessment.http
 ```
 
 Request body:
@@ -95,6 +122,12 @@ Request body:
 Successful responses return `201`, a `Location` header, and an
 `Idempotency-Replayed` header.
 
+Response fixture:
+
+```text
+examples/responses/biometric-assessment.response.json
+```
+
 ## POST /v1/intervention-recommendations
 
 Creates ranked intervention recommendations from submitted biomarker values.
@@ -117,6 +150,12 @@ curl https://api.acceptance.l-gevity.nl/v1/intervention-recommendations \
   --data-binary "@examples/curl/intervention-recommendation.payload.json"
 ```
 
+Request file:
+
+```text
+examples/http/create-intervention-recommendations.http
+```
+
 Request body:
 
 ```json
@@ -132,16 +171,16 @@ Request body:
 Successful responses return `201`, a `Location` header, and an
 `Idempotency-Replayed` header.
 
+Response fixture:
+
+```text
+examples/responses/intervention-recommendations.response.json
+```
+
 ## Error Response
 
 Errors use Problem Details JSON with `application/problem+json`.
 
-```json
-{
-  "type": "https://api.l-gevity.nl/problems/422",
-  "title": "Invalid request body",
-  "status": 422,
-  "detail": "biomarkers: Required",
-  "requestId": "req_01JZ7Z8Y2Y5V8A9T7P6Q5R4S3T"
-}
+```text
+examples/responses/problem.validation.response.json
 ```

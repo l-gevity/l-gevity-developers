@@ -1,0 +1,13 @@
+POST https://api.acceptance.l-gevity.nl/v1/intervention-recommendations
+Content-Type: application/json
+X-Api-Key: YOUR_API_KEY
+Idempotency-Key: a7cdb0e1-1ad8-49e9-a487-29acdbabf8f1
+
+{
+  "biomarkers": [
+    { "code": "birthYear", "value": 1972, "unit": "year" },
+    { "code": "gender", "value": "male" },
+    { "code": "waistToHeightRatio", "value": 0.62, "unit": "ratio" }
+  ]
+}
+
