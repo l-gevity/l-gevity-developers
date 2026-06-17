@@ -41,7 +41,6 @@ docs/complete-manifest.md
 The public API currently contains:
 
 ```text
-GET  /health
 GET  /v1/manifest
 POST /v1/biometric-assessments
 POST /v1/intervention-recommendations
@@ -64,7 +63,7 @@ Create and manage API keys from the L-GEVITY profile page:
 https://l-gevity.nl/profile.html#api-keys
 ```
 
-The manifest and health endpoints are public and do not require an API key.
+The manifest endpoint is public and does not require an API key.
 
 ## Quick Start
 

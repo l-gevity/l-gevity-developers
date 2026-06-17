@@ -26,26 +26,6 @@ Response fixtures live in:
 examples/responses/
 ```
 
-## GET /health
-
-Checks whether the API facade is reachable.
-
-```bash
-curl https://api.acceptance.l-gevity.nl/health
-```
-
-Request file:
-
-```text
-examples/http/health.http
-```
-
-Example response:
-
-```text
-examples/responses/health.response.json
-```
-
 ## GET /v1/manifest
 
 Returns the public product list and biomarker input manifest. This endpoint does

@@ -17,10 +17,6 @@
     ],
     "tags": [
         {
-            "name": "health",
-            "description": "Unauthenticated platform health."
-        },
-        {
             "name": "manifest",
             "description": "Public API product and input metadata."
         },
@@ -34,31 +30,6 @@
         }
     ],
     "paths": {
-        "/health": {
-            "get": {
-                "tags": [
-                    "health"
-                ],
-                "operationId": "getHealth",
-                "summary": "Check API facade health.",
-                "security": [],
-                "responses": {
-                    "200": {
-                        "description": "The facade is reachable.",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Health"
-                                }
-                            }
-                        }
-                    },
-                    "503": {
-                        "$ref": "#/components/responses/ServiceUnavailable"
-                    }
-                }
-            }
-        },
         "/v1/manifest": {
             "get": {
                 "tags": [
@@ -280,26 +251,6 @@
             }
         },
         "schemas": {
-            "Health": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": [
-                    "status",
-                    "checkedAt"
-                ],
-                "properties": {
-                    "status": {
-                        "type": "string",
-                        "enum": [
-                            "ok"
-                        ]
-                    },
-                    "checkedAt": {
-                        "type": "string",
-                        "format": "date-time"
-                    }
-                }
-            },
             "Problem": {
                 "type": "object",
                 "additionalProperties": true,
