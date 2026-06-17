@@ -21,6 +21,18 @@ The OpenAPI contract is published at:
 openapi/public-api.v1.openapi.json
 ```
 
+Request examples are published at:
+
+```text
+docs/request-examples.md
+```
+
+The complete manifest example is published at:
+
+```text
+docs/complete-manifest.md
+```
+
 The public API currently contains:
 
 ```text
@@ -104,4 +116,3 @@ This repository is intentionally small. It contains the public API contract,
 examples, and publication rules. It does not contain runtime implementation,
 engine internals, infrastructure configuration, customer data, secrets, or API
 keys.
-
