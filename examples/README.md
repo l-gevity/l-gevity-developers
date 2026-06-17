@@ -20,11 +20,36 @@ Runnable HTTP request files live in:
 examples/http/
 ```
 
+Runnable Node.js examples live in:
+
+```text
+examples/node/
+```
+
 Response fixtures live in:
 
 ```text
 examples/responses/
 ```
+
+For the full first-run journey, start with:
+
+```text
+docs/getting-started.md
+```
+
+For response field meanings, use:
+
+```text
+docs/response-guide.md
+```
+
+The curl scripts read these environment variables:
+
+| Variable | Required | Default |
+| -------- | -------- | ------- |
+| `LGEVITY_API_KEY` | Yes | none |
+| `LGEVITY_BASE_URL` | No | `https://api.acceptance.l-gevity.nl` |
 
 ## GET /v1/manifest
 
@@ -92,7 +117,7 @@ Request body:
     { "code": "hsCRP", "value": 1.8, "unit": "mg/L" },
     { "code": "vo2max", "value": 42, "unit": "ml/kg/min" },
     { "code": "dailySteps", "value": 7200, "unit": "steps/day" },
-    { "code": "sleepHours", "value": 7, "unit": "bool" }
+    { "code": "sleepHours", "value": 7 }
   ]
 }
 ```
@@ -103,6 +128,13 @@ Response fixture:
 
 ```text
 examples/responses/biometric-assessment.response.json
+```
+
+Node.js example:
+
+```bash
+cd examples/node
+LGEVITY_API_KEY="YOUR_API_KEY" node create-biometric-assessment.mjs
 ```
 
 ## POST /v1/intervention-recommendations

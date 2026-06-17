@@ -11,6 +11,45 @@ embedding the engine itself. The API returns machine-readable results; account
 management, API-key creation, billing, and engine source code stay outside this
 public repository.
 
+## Start Here
+
+1. Inspect the public input manifest:
+
+   ```bash
+   curl https://api.acceptance.l-gevity.nl/v1/manifest
+   ```
+
+2. Create an API key from the authenticated L-GEVITY profile page:
+
+   ```text
+   https://l-gevity.nl/profile.html#api-keys
+   ```
+
+3. Choose the matching API base URL:
+
+   | Key prefix | Base URL |
+   | ---------- | -------- |
+   | `lg_test_` | `https://api.acceptance.l-gevity.nl` |
+   | `lg_live_` | `https://api.l-gevity.nl` |
+
+4. Run a product example:
+
+   ```bash
+   git clone https://github.com/l-gevity/l-gevity-developers.git
+   cd l-gevity-developers/examples/curl
+
+   export LGEVITY_API_KEY="YOUR_API_KEY"
+   export LGEVITY_BASE_URL="https://api.acceptance.l-gevity.nl"
+
+   ./create-biometric-assessment.sh
+   ```
+
+5. Read the response guide:
+
+   ```text
+   docs/response-guide.md
+   ```
+
 ## Base URLs
 
 ```text
@@ -18,7 +57,41 @@ Production:  https://api.l-gevity.nl
 Acceptance:  https://api.acceptance.l-gevity.nl
 ```
 
-## Public Contract
+## What The API Does
+
+| Need | Endpoint | Auth |
+| ---- | -------- | ---- |
+| Discover supported products and biomarker input codes | `GET /v1/manifest` | None |
+| Convert biomarker values into a biometric engine assessment | `POST /v1/biometric-assessments` | `X-Api-Key` |
+| Convert biomarker values into ranked intervention recommendations | `POST /v1/intervention-recommendations` | `X-Api-Key` |
+
+The API is designed for server-to-server use. Keep API keys on your backend; do
+not put them in browser JavaScript, mobile apps, public repositories, logs, or
+screenshots.
+
+This public API does not create accounts, manage API keys, expose billing
+records, store user profiles, or publish engine source code.
+
+## Request Model
+
+Product requests send one JSON object with a `biomarkers` array:
+
+```json
+{
+  "biomarkers": [
+    { "code": "birthYear", "value": 1984, "unit": "year" },
+    { "code": "gender", "value": "male" },
+    { "code": "waistToHeightRatio", "value": 0.52, "unit": "ratio" }
+  ]
+}
+```
+
+Use `GET /v1/manifest` to discover valid biomarker `code` values, display names,
+supported units, and value types. `unit` is optional in the request. Include
+`birthYear` and `gender` when available because age- and sex-aware calculations
+produce better output.
+
+## Contract And Examples
 
 The OpenAPI contract is published at:
 
@@ -32,22 +105,27 @@ Examples and curl payloads are published at:
 examples/README.md
 ```
 
+The examples include curl, `.http`, and Node.js `fetch` examples. There is no
+official SDK yet; the OpenAPI contract can be used to generate one inside your
+own stack.
+
 The complete manifest example is published at:
 
 ```text
 docs/complete-manifest.md
 ```
 
-The public API currently contains:
+The first-run guide is published at:
 
 ```text
-GET  /v1/manifest
-POST /v1/biometric-assessments
-POST /v1/intervention-recommendations
+docs/getting-started.md
 ```
 
-API-key creation, revocation, usage, billing, and account state are managed in
-the authenticated L-GEVITY site, not in this public repository.
+The response guide is published at:
+
+```text
+docs/response-guide.md
+```
 
 ## Authentication
 
@@ -65,28 +143,6 @@ https://l-gevity.nl/profile.html#api-keys
 
 The manifest endpoint is public and does not require an API key.
 
-## Quick Start
-
-Fetch the public manifest:
-
-```bash
-curl https://api.acceptance.l-gevity.nl/v1/manifest
-```
-
-Create a biometric assessment:
-
-```bash
-cd examples/curl
-LGEVITY_API_KEY="YOUR_API_KEY" ./create-biometric-assessment.sh
-```
-
-Create intervention recommendations:
-
-```bash
-cd examples/curl
-LGEVITY_API_KEY="YOUR_API_KEY" ./create-intervention-recommendations.sh
-```
-
 ## Errors
 
 Error responses use Problem Details JSON with `application/problem+json`.
@@ -102,6 +158,16 @@ Example:
   "requestId": "req_01JZ7Z8Y2Y5V8A9T7P6Q5R4S3T"
 }
 ```
+
+Common causes:
+
+| Status | Meaning | First check |
+| ------ | ------- | ----------- |
+| `400` | Malformed HTTP request | JSON syntax and `Content-Type: application/json` |
+| `401` | Missing or invalid API key | `X-Api-Key`, key prefix, and matching base URL |
+| `403` | API key exists but is disabled | Revoke/create a new key in the L-GEVITY profile page |
+| `422` | Valid JSON but invalid request body | Required fields, biomarker array shape, value types |
+| `503` | Temporary service outage | Retry later with normal backoff |
 
 ## Repository Boundary
 
