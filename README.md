@@ -2,8 +2,7 @@
 
 The L-GEVITY API lets backend applications submit biomarker measurements and
 receive structured longevity analysis over HTTP JSON. Integrations can fetch the
-public biomarker manifest, create a biometric assessment, and request ranked
-intervention recommendations from the L-GEVITY intervention catalogue.
+public biomarker manifest and create a biometric assessment.
 
 Use the API when you want to add L-GEVITY engine output to another product,
 dashboard, coach workflow, lab portal, or internal health application without
@@ -19,18 +18,18 @@ public repository.
    curl https://api.acceptance.l-gevity.nl/v1/manifest
    ```
 
-2. Create an API key from the authenticated L-GEVITY profile page:
+   See the [manifest HTTP request](examples/http/manifest.http) and
+   [complete manifest example](docs/complete-manifest.md).
 
-   ```text
-   https://l-gevity.nl/profile.html#api-keys
-   ```
+2. Create an API key from the authenticated
+   [L-GEVITY profile page](https://l-gevity.nl/profile.html#api-keys).
 
 3. Choose the matching API base URL:
 
-   | Key prefix | Base URL |
-   | ---------- | -------- |
+   | Key prefix | Base URL                             |
+   | ---------- | ------------------------------------ |
    | `lg_test_` | `https://api.acceptance.l-gevity.nl` |
-   | `lg_live_` | `https://api.l-gevity.nl` |
+   | `lg_live_` | `https://api.l-gevity.nl`            |
 
 4. Run a product example:
 
@@ -44,11 +43,15 @@ public repository.
    ./create-biometric-assessment.sh
    ```
 
-5. Read the response guide:
+   Related examples:
 
-   ```text
-   docs/response-guide.md
-   ```
+   - [Curl script](examples/curl/create-biometric-assessment.sh)
+   - [Curl payload](examples/curl/biometric-assessment.payload.json)
+   - [HTTP request](examples/http/create-biometric-assessment.http)
+   - [Node.js fetch example](examples/node/create-biometric-assessment.mjs)
+   - [Example response](examples/responses/biometric-assessment.response.json)
+
+5. Read the [response guide](docs/response-guide.md).
 
 ## Base URLs
 
@@ -59,11 +62,10 @@ Acceptance:  https://api.acceptance.l-gevity.nl
 
 ## What The API Does
 
-| Need | Endpoint | Auth |
-| ---- | -------- | ---- |
-| Discover supported products and biomarker input codes | `GET /v1/manifest` | None |
-| Convert biomarker values into a biometric engine assessment | `POST /v1/biometric-assessments` | `X-Api-Key` |
-| Convert biomarker values into ranked intervention recommendations | `POST /v1/intervention-recommendations` | `X-Api-Key` |
+| Need                                                        | Endpoint                                                                           | Auth        |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------- |
+| Discover supported products and biomarker input codes       | [`GET /v1/manifest`](examples/http/manifest.http)                                  | None        |
+| Convert biomarker values into a biometric engine assessment | [`POST /v1/biometric-assessments`](examples/http/create-biometric-assessment.http) | `X-Api-Key` |
 
 The API is designed for server-to-server use. Keep API keys on your backend; do
 not put them in browser JavaScript, mobile apps, public repositories, logs, or
@@ -93,39 +95,21 @@ produce better output.
 
 ## Contract And Examples
 
-The OpenAPI contract is published at:
+The OpenAPI contract is published at
+[openapi/public-api.v1.openapi.json](openapi/public-api.v1.openapi.json).
 
-```text
-openapi/public-api.v1.openapi.json
-```
-
-Examples and curl payloads are published at:
-
-```text
-examples/README.md
-```
+Examples and curl payloads are published in [examples/README.md](examples/README.md).
 
 The examples include curl, `.http`, and Node.js `fetch` examples. There is no
 official SDK yet; the OpenAPI contract can be used to generate one inside your
 own stack.
 
-The complete manifest example is published at:
+The complete manifest example is published at
+[docs/complete-manifest.md](docs/complete-manifest.md).
 
-```text
-docs/complete-manifest.md
-```
+The first-run guide is published at [docs/getting-started.md](docs/getting-started.md).
 
-The first-run guide is published at:
-
-```text
-docs/getting-started.md
-```
-
-The response guide is published at:
-
-```text
-docs/response-guide.md
-```
+The response guide is published at [docs/response-guide.md](docs/response-guide.md).
 
 ## Authentication
 
@@ -135,11 +119,8 @@ Product routes require an API key in the `X-Api-Key` header:
 X-Api-Key: YOUR_API_KEY
 ```
 
-Create and manage API keys from the L-GEVITY profile page:
-
-```text
-https://l-gevity.nl/profile.html#api-keys
-```
+Create and manage API keys from the
+[L-GEVITY profile page](https://l-gevity.nl/profile.html#api-keys).
 
 The manifest endpoint is public and does not require an API key.
 
@@ -161,13 +142,13 @@ Example:
 
 Common causes:
 
-| Status | Meaning | First check |
-| ------ | ------- | ----------- |
-| `400` | Malformed HTTP request | JSON syntax and `Content-Type: application/json` |
-| `401` | Missing or invalid API key | `X-Api-Key`, key prefix, and matching base URL |
-| `403` | API key exists but is disabled | Revoke/create a new key in the L-GEVITY profile page |
-| `422` | Valid JSON but invalid request body | Required fields, biomarker array shape, value types |
-| `503` | Temporary service outage | Retry later with normal backoff |
+| Status | Meaning                             | First check                                          |
+| ------ | ----------------------------------- | ---------------------------------------------------- |
+| `400`  | Malformed HTTP request              | JSON syntax and `Content-Type: application/json`     |
+| `401`  | Missing or invalid API key          | `X-Api-Key`, key prefix, and matching base URL       |
+| `403`  | API key exists but is disabled      | Revoke/create a new key in the L-GEVITY profile page |
+| `422`  | Valid JSON but invalid request body | Required fields, biomarker array shape, value types  |
+| `503`  | Temporary service outage            | Retry later with normal backoff                      |
 
 ## Repository Boundary
 

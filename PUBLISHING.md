@@ -34,7 +34,6 @@ Before updating this public repository:
    ```text
    /v1/manifest
    /v1/biometric-assessments
-   /v1/intervention-recommendations
    ```
 
 6. Confirm README links API-key creation back to the authenticated L-GEVITY site:
@@ -44,4 +43,3 @@ Before updating this public repository:
    ```
 
 7. Review the public diff before pushing.
-

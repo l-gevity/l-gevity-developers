@@ -12,7 +12,6 @@ Use cases:
 
 - show a biometric assessment in another dashboard
 - enrich a lab, coach, or clinic workflow with L-GEVITY scores
-- request ranked lifestyle and intervention recommendations from submitted data
 - validate supported biomarker input fields against the manifest
 
 Out of scope:
@@ -53,10 +52,10 @@ Keys are shown once. Store the value in your secret manager immediately.
 
 Use the key prefix to choose the base URL:
 
-| Key prefix | Environment | Base URL |
-| ---------- | ----------- | -------- |
-| `lg_test_` | Acceptance | `https://api.acceptance.l-gevity.nl` |
-| `lg_live_` | Production | `https://api.l-gevity.nl` |
+| Key prefix | Environment | Base URL                             |
+| ---------- | ----------- | ------------------------------------ |
+| `lg_test_` | Acceptance  | `https://api.acceptance.l-gevity.nl` |
+| `lg_live_` | Production  | `https://api.l-gevity.nl`            |
 
 ## 4. Run The Curl Examples
 
@@ -68,15 +67,14 @@ export LGEVITY_API_KEY="YOUR_API_KEY"
 export LGEVITY_BASE_URL="https://api.acceptance.l-gevity.nl"
 
 ./create-biometric-assessment.sh
-./create-intervention-recommendations.sh
 ```
 
-The product calls return `201 Created`, a `Location` header, and a JSON response
+The product call returns `201 Created`, a `Location` header, and a JSON response
 body. Each successful product response contains `billableUnits`.
 
 ## 5. Build Your Request Body
 
-Both product endpoints use the same request shape:
+The product endpoint uses this request shape:
 
 ```json
 {
@@ -96,14 +94,10 @@ Rules:
 - `unit` and `measuredAt` are optional
 - include `birthYear` and `gender` when available for better age- and sex-aware output
 
-## 6. Choose The Product Endpoint
+## 6. Use The Product Endpoint
 
 Use `POST /v1/biometric-assessments` when you need a compact assessment with
 scores, data currency, risk bands, and the detailed engine result.
-
-Use `POST /v1/intervention-recommendations` when you need ranked interventions
-from the L-GEVITY intervention catalogue. This route runs the biometric analysis
-internally and then ranks actionable interventions.
 
 ## 7. Handle Errors
 
@@ -123,10 +117,8 @@ Log `requestId` in your backend. Do not log API keys or private health data.
 
 Troubleshooting:
 
-| Symptom | Likely cause | Fix |
-| ------- | ------------ | --- |
-| `401 Invalid API key` | Key missing, mistyped, revoked, or used against the wrong environment | Check `X-Api-Key`, key prefix, and base URL |
-| `422 Invalid request body` | Request shape does not match the OpenAPI schema | Validate against `openapi/public-api.v1.openapi.json` |
-| Empty or weak recommendations | Too little actionable biomarker data | Add more measured biomarkers from the manifest |
-| Unexpected field names | Raw engine result contains detailed engine-native keys | Use `docs/response-guide.md` for stable integration fields |
-
+| Symptom                    | Likely cause                                                          | Fix                                                        |
+| -------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------- |
+| `401 Invalid API key`      | Key missing, mistyped, revoked, or used against the wrong environment | Check `X-Api-Key`, key prefix, and base URL                |
+| `422 Invalid request body` | Request shape does not match the OpenAPI schema                       | Validate against `openapi/public-api.v1.openapi.json`      |
+| Unexpected field names     | Raw engine result contains detailed engine-native keys                | Use `docs/response-guide.md` for stable integration fields |
