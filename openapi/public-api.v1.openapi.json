@@ -2,7 +2,7 @@
     "openapi": "3.1.0",
     "info": {
         "title": "L-GEVITY Public API",
-        "summary": "REST facade for external developer access to L-GEVITY biometric and intervention engine products.",
+        "summary": "REST facade for external developer access to the L-GEVITY biometric engine product.",
         "version": "1.0.0"
     },
     "servers": [
@@ -23,18 +23,12 @@
         {
             "name": "biometrics",
             "description": "Biometric engine product API."
-        },
-        {
-            "name": "interventions",
-            "description": "Intervention engine product API."
         }
     ],
     "paths": {
         "/v1/manifest": {
             "get": {
-                "tags": [
-                    "manifest"
-                ],
+                "tags": ["manifest"],
                 "operationId": "getManifest",
                 "summary": "Get public API manifest.",
                 "description": "Returns supported products, scope, billable unit, and supported biometric inputs for client validation and documentation. This endpoint returns metadata only and never returns partner or user data.",
@@ -58,9 +52,7 @@
         },
         "/v1/biometric-assessments": {
             "post": {
-                "tags": [
-                    "biometrics"
-                ],
+                "tags": ["biometrics"],
                 "operationId": "createBiometricAssessment",
                 "summary": "Create a biometric assessment.",
                 "description": "Billable product operation for `biometric-engine-v1`.",
@@ -91,63 +83,6 @@
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/BiometricAssessment"
-                                }
-                            }
-                        }
-                    },
-                    "400": {
-                        "$ref": "#/components/responses/BadRequest"
-                    },
-                    "401": {
-                        "$ref": "#/components/responses/Unauthorized"
-                    },
-                    "403": {
-                        "$ref": "#/components/responses/Forbidden"
-                    },
-                    "422": {
-                        "$ref": "#/components/responses/UnprocessableEntity"
-                    },
-                    "503": {
-                        "$ref": "#/components/responses/ServiceUnavailable"
-                    }
-                }
-            }
-        },
-        "/v1/intervention-recommendations": {
-            "post": {
-                "tags": [
-                    "interventions"
-                ],
-                "operationId": "createInterventionRecommendations",
-                "summary": "Create ranked intervention recommendations.",
-                "description": "Billable product operation for `intervention-engine-v1`.",
-                "security": [
-                    {
-                        "ApiKeyAuth": []
-                    }
-                ],
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/InterventionRecommendationCreate"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "201": {
-                        "description": "Recommendations created.",
-                        "headers": {
-                            "Location": {
-                                "$ref": "#/components/headers/Location"
-                            }
-                        },
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/InterventionRecommendationResult"
                                 }
                             }
                         }
@@ -254,11 +189,7 @@
             "Problem": {
                 "type": "object",
                 "additionalProperties": true,
-                "required": [
-                    "type",
-                    "title",
-                    "status"
-                ],
+                "required": ["type", "title", "status"],
                 "properties": {
                     "type": {
                         "type": "string",
@@ -286,26 +217,16 @@
             },
             "ProductId": {
                 "type": "string",
-                "enum": [
-                    "biometric-engine-v1",
-                    "intervention-engine-v1"
-                ]
+                "enum": ["biometric-engine-v1"]
             },
             "Scope": {
                 "type": "string",
-                "enum": [
-                    "product:call"
-                ]
+                "enum": ["product:call"]
             },
             "PublicManifest": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": [
-                    "apiVersion",
-                    "generatedAt",
-                    "products",
-                    "biomarkers"
-                ],
+                "required": ["apiVersion", "generatedAt", "products", "biomarkers"],
                 "properties": {
                     "apiVersion": {
                         "type": "string"
@@ -331,13 +252,7 @@
             "PublicProduct": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": [
-                    "id",
-                    "name",
-                    "scopes",
-                    "billableUnit",
-                    "operations"
-                ],
+                "required": ["id", "name", "scopes", "billableUnit", "operations"],
                 "properties": {
                     "id": {
                         "$ref": "#/components/schemas/ProductId"
@@ -353,9 +268,7 @@
                     },
                     "billableUnit": {
                         "type": "string",
-                        "enum": [
-                            "successful_product_call"
-                        ]
+                        "enum": ["successful_product_call"]
                     },
                     "operations": {
                         "type": "array",
@@ -368,12 +281,7 @@
             "BiomarkerManifestItem": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": [
-                    "code",
-                    "name",
-                    "units",
-                    "valueType"
-                ],
+                "required": ["code", "name", "units", "valueType"],
                 "properties": {
                     "code": {
                         "type": "string"
@@ -389,21 +297,14 @@
                     },
                     "valueType": {
                         "type": "string",
-                        "enum": [
-                            "number",
-                            "string",
-                            "boolean"
-                        ]
+                        "enum": ["number", "string", "boolean"]
                     }
                 }
             },
             "BiomarkerInput": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": [
-                    "code",
-                    "value"
-                ],
+                "required": ["code", "value"],
                 "properties": {
                     "code": {
                         "type": "string",
@@ -416,7 +317,8 @@
                                 "type": "number"
                             },
                             {
-                                "type": "string"
+                                "type": "string",
+                                "maxLength": 256
                             },
                             {
                                 "type": "boolean"
@@ -437,9 +339,7 @@
             "BiometricAssessmentCreate": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": [
-                    "biomarkers"
-                ],
+                "required": ["biomarkers"],
                 "properties": {
                     "biomarkers": {
                         "type": "array",
@@ -499,10 +399,7 @@
             "BiometricEngineResult": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": [
-                    "metrics",
-                    "metadata"
-                ],
+                "required": ["metrics", "metadata"],
                 "properties": {
                     "metrics": {
                         "$ref": "#/components/schemas/BiometricValueMap"
@@ -598,205 +495,13 @@
             "RiskBand": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": [
-                    "domain",
-                    "hazardRatio"
-                ],
+                "required": ["domain", "hazardRatio"],
                 "properties": {
                     "domain": {
                         "type": "string"
                     },
                     "hazardRatio": {
                         "type": "number"
-                    }
-                }
-            },
-            "InterventionRecommendationCreate": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": [
-                    "biomarkers"
-                ],
-                "properties": {
-                    "biomarkers": {
-                        "type": "array",
-                        "minItems": 1,
-                        "maxItems": 100,
-                        "items": {
-                            "$ref": "#/components/schemas/BiomarkerInput"
-                        }
-                    }
-                }
-            },
-            "InterventionRecommendationResult": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": [
-                    "id",
-                    "createdAt",
-                    "productId",
-                    "billableUnits",
-                    "recommendations"
-                ],
-                "properties": {
-                    "id": {
-                        "type": "string"
-                    },
-                    "createdAt": {
-                        "type": "string",
-                        "format": "date-time"
-                    },
-                    "productId": {
-                        "const": "intervention-engine-v1"
-                    },
-                    "billableUnits": {
-                        "type": "integer",
-                        "minimum": 1
-                    },
-                    "recommendations": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/InterventionRecommendation"
-                        }
-                    }
-                }
-            },
-            "InterventionRecommendation": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": [
-                    "rank",
-                    "biomarker",
-                    "direction",
-                    "severity",
-                    "vbImpact",
-                    "impactRatio",
-                    "rationale",
-                    "intervention"
-                ],
-                "properties": {
-                    "rank": {
-                        "type": "integer",
-                        "minimum": 1
-                    },
-                    "biomarker": {
-                        "type": "string"
-                    },
-                    "direction": {
-                        "type": "string",
-                        "enum": [
-                            "lower",
-                            "raise"
-                        ]
-                    },
-                    "severity": {
-                        "type": "number"
-                    },
-                    "vbImpact": {
-                        "type": "number"
-                    },
-                    "impactRatio": {
-                        "type": "number"
-                    },
-                    "rationale": {
-                        "$ref": "#/components/schemas/InterventionRecommendationRationale"
-                    },
-                    "intervention": {
-                        "$ref": "#/components/schemas/PublicIntervention"
-                    }
-                }
-            },
-            "InterventionRecommendationRationale": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": [
-                    "actionableRiskRelief",
-                    "tierFactor"
-                ],
-                "properties": {
-                    "actionableRiskRelief": {
-                        "type": "number"
-                    },
-                    "tierFactor": {
-                        "type": "number"
-                    }
-                }
-            },
-            "PublicIntervention": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": [
-                    "id",
-                    "vb",
-                    "biomarkers",
-                    "category",
-                    "labelNL",
-                    "shortNL",
-                    "anchor",
-                    "weeksToEffect",
-                    "effectSummaryNL",
-                    "safetyNL",
-                    "citation",
-                    "evidenceTier",
-                    "effectWeight"
-                ],
-                "properties": {
-                    "id": {
-                        "type": "string"
-                    },
-                    "vb": {
-                        "type": "string"
-                    },
-                    "biomarkers": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "category": {
-                        "type": "string"
-                    },
-                    "friction": {
-                        "type": "string"
-                    },
-                    "labelNL": {
-                        "type": "string"
-                    },
-                    "shortNL": {
-                        "type": "string"
-                    },
-                    "anchor": {
-                        "type": "string"
-                    },
-                    "weeksToEffect": {
-                        "type": "integer"
-                    },
-                    "effectSummaryNL": {
-                        "type": "string"
-                    },
-                    "safetyNL": {
-                        "type": "string"
-                    },
-                    "citation": {
-                        "type": "string"
-                    },
-                    "evidenceTier": {
-                        "type": "integer",
-                        "enum": [
-                            1,
-                            2,
-                            3
-                        ]
-                    },
-                    "effectWeight": {
-                        "type": "integer",
-                        "enum": [
-                            1,
-                            2,
-                            3,
-                            4,
-                            5
-                        ]
                     }
                 }
             }

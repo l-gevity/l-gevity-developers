@@ -46,10 +46,10 @@ docs/response-guide.md
 
 The curl scripts read these environment variables:
 
-| Variable | Required | Default |
-| -------- | -------- | ------- |
-| `LGEVITY_API_KEY` | Yes | none |
-| `LGEVITY_BASE_URL` | No | `https://api.acceptance.l-gevity.nl` |
+| Variable           | Required | Default                              |
+| ------------------ | -------- | ------------------------------------ |
+| `LGEVITY_API_KEY`  | Yes      | none                                 |
+| `LGEVITY_BASE_URL` | No       | `https://api.acceptance.l-gevity.nl` |
 
 ## GET /v1/manifest
 
@@ -135,52 +135,6 @@ Node.js example:
 ```bash
 cd examples/node
 LGEVITY_API_KEY="YOUR_API_KEY" node create-biometric-assessment.mjs
-```
-
-## POST /v1/intervention-recommendations
-
-Creates ranked intervention recommendations from submitted biomarker values.
-
-Required headers:
-
-```text
-Content-Type: application/json
-X-Api-Key: YOUR_API_KEY
-```
-
-Request:
-
-```bash
-curl https://api.acceptance.l-gevity.nl/v1/intervention-recommendations \
-  -H "Content-Type: application/json" \
-  -H "X-Api-Key: YOUR_API_KEY" \
-  --data-binary "@examples/curl/intervention-recommendation.payload.json"
-```
-
-Request file:
-
-```text
-examples/http/create-intervention-recommendations.http
-```
-
-Request body:
-
-```json
-{
-  "biomarkers": [
-    { "code": "birthYear", "value": 1972, "unit": "year" },
-    { "code": "gender", "value": "male" },
-    { "code": "waistToHeightRatio", "value": 0.62, "unit": "ratio" }
-  ]
-}
-```
-
-Successful responses return `201`, a `Location` header, and a JSON body.
-
-Response fixture:
-
-```text
-examples/responses/intervention-recommendations.response.json
 ```
 
 ## Error Response

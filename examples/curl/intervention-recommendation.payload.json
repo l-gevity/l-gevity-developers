@@ -1,8 +1,0 @@
-{
-  "biomarkers": [
-    { "code": "birthYear", "value": 1972, "unit": "year" },
-    { "code": "gender", "value": "male" },
-    { "code": "waistToHeightRatio", "value": 0.62, "unit": "ratio" }
-  ]
-}
-
