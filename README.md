@@ -146,7 +146,6 @@ Common causes:
 | ------ | ----------------------------------- | ---------------------------------------------------- |
 | `400`  | Malformed HTTP request              | JSON syntax and `Content-Type: application/json`     |
 | `401`  | Missing or invalid API key          | `X-Api-Key`, key prefix, and matching base URL       |
-| `403`  | API key exists but is disabled      | Revoke/create a new key in the L-GEVITY profile page |
 | `422`  | Valid JSON but invalid request body | Required fields, biomarker array shape, value types  |
 | `503`  | Temporary service outage            | Retry later with normal backoff                      |
 

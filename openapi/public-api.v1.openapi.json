@@ -93,9 +93,6 @@
                     "401": {
                         "$ref": "#/components/responses/Unauthorized"
                     },
-                    "403": {
-                        "$ref": "#/components/responses/Forbidden"
-                    },
                     "422": {
                         "$ref": "#/components/responses/UnprocessableEntity"
                     },
@@ -136,16 +133,6 @@
             },
             "Unauthorized": {
                 "description": "Missing or invalid credentials.",
-                "content": {
-                    "application/problem+json": {
-                        "schema": {
-                            "$ref": "#/components/schemas/Problem"
-                        }
-                    }
-                }
-            },
-            "Forbidden": {
-                "description": "The credential is valid but is disabled.",
                 "content": {
                     "application/problem+json": {
                         "schema": {

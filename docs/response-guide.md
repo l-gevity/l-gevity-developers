@@ -43,7 +43,6 @@ Errors use `application/problem+json`.
 | ------ | ------------------------------------ |
 | `400`  | Malformed HTTP request               |
 | `401`  | Missing or invalid API key           |
-| `403`  | Valid API key that is disabled       |
 | `422`  | Valid JSON with invalid request body |
 | `503`  | Temporary dependency outage          |
 
