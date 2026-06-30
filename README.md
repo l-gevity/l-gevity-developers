@@ -67,6 +67,29 @@ Acceptance:  https://api.acceptance.l-gevity.nl
 | Discover supported products and biomarker input codes       | [`GET /v1/manifest`](examples/http/manifest.http)                                  | None        |
 | Convert biomarker values into a biometric engine assessment | [`POST /v1/biometric-assessments`](examples/http/create-biometric-assessment.http) | `X-Api-Key` |
 
+## API Functionality
+
+The public API exposes the biometric assessment layer of L-GEVITY's longevity
+platform. It is built for backend systems that already collect health
+measurements and need structured engine output without embedding the L-GEVITY
+engine.
+
+The workflow follows the product flow from measurement to interpretation:
+
+1. Discover supported biomarker inputs with `GET /v1/manifest`. The manifest
+   lists the input codes, display names, units, and value types that clients can
+   use to build validation and mapping logic.
+2. Submit measured values with `POST /v1/biometric-assessments`. The API accepts
+   blood values, body composition, fitness, cognition, movement, and lifestyle
+   biomarkers when they are available.
+3. Receive a machine-readable assessment. The response includes a compact
+   `biologicalValue`, a `dataCurrency` signal, ranked `riskBands`, and the
+   detailed `engineResult` for deeper analytics.
+
+The API is intentionally stateless from the integrator's point of view: each
+assessment is calculated from the submitted payload, and the public contract does
+not expose account, profile, billing, or action-planning workflows.
+
 The API is designed for server-to-server use. Keep API keys on your backend; do
 not put them in browser JavaScript, mobile apps, public repositories, logs, or
 screenshots.
