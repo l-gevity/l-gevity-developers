@@ -12,441 +12,322 @@ Generated from the private runtime manifest source with timestamp 2026-06-17T00:
     {
       "id": "biometric-engine-v1",
       "name": "Biometric engine",
-      "scopes": [
-        "product:call"
-      ],
+      "scopes": ["product:call"],
       "billableUnit": "successful_product_call",
-      "operations": [
-        "createBiometricAssessment"
-      ]
-    },
-    {
-      "id": "intervention-engine-v1",
-      "name": "Intervention engine",
-      "scopes": [
-        "product:call"
-      ],
-      "billableUnit": "successful_product_call",
-      "operations": [
-        "createInterventionRecommendations"
-      ]
+      "operations": ["createBiometricAssessment"]
     }
   ],
   "biomarkers": [
     {
       "code": "sittingRising",
       "name": "Sitting-Rising Test",
-      "units": [
-        "score 0-10"
-      ],
+      "units": ["score 0-10"],
       "valueType": "number"
     },
     {
       "code": "yBalanceAnterior",
       "name": "Y-Balance voorwaarts",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "ankleDorsiflexion",
       "name": "Enkeldorsaalflexie",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "singleLegSquat",
       "name": "Éénbeenshurk",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "singleLegHopDistance",
       "name": "Éénbeen Hopdistantie",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "leftComposite",
       "name": "LEFT test",
-      "units": [
-        "s"
-      ],
+      "units": ["s"],
       "valueType": "number"
     },
     {
       "code": "coreEndurance",
       "name": "McGill Plankhouding",
-      "units": [
-        "s"
-      ],
+      "units": ["s"],
       "valueType": "number"
     },
     {
       "code": "singleLegBalance",
       "name": "Éénbeenstand",
-      "units": [
-        "s"
-      ],
+      "units": ["s"],
       "valueType": "number"
     },
     {
       "code": "squatPattern",
       "name": "Diepe Squat Patroon",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "hingePattern",
       "name": "Heupbuiging",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "hipInternalRotation",
       "name": "Heup Inwaartse Rotatie",
-      "units": [
-        "graden"
-      ],
+      "units": ["graden"],
       "valueType": "number"
     },
     {
       "code": "rotationPattern",
       "name": "Bird Dog",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "loadTransfer",
       "name": "Rechte Beenhef (ASLR)",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "coreBrace",
       "name": "Core Spanning (360° Expansie)",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "diaphragmControl",
       "name": "Diepe ademhaling",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "pelvicFloorControl",
       "name": "Bekkenbodemcontrole",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "carryPattern",
       "name": "Farmer Carry",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "overheadLungeWalk",
       "name": "Éénarm Overhead Uitvalspas",
-      "units": [
-        "stappen 0-3"
-      ],
+      "units": ["stappen 0-3"],
       "valueType": "number"
     },
     {
       "code": "thoracicRotation",
       "name": "Thoracale Rotatie",
-      "units": [
-        "graden"
-      ],
+      "units": ["graden"],
       "valueType": "number"
     },
     {
       "code": "thoracicExtension",
       "name": "Thoracale Extensie",
-      "units": [
-        "graden"
-      ],
+      "units": ["graden"],
       "valueType": "number"
     },
     {
       "code": "staticPosturalAlignment",
       "name": "Lichaamshouding",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "lumbarFlexion",
       "name": "Vinger naar Vloer",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "thomasTest",
       "name": "Thomas Test",
-      "units": [
-        "graden"
-      ],
+      "units": ["graden"],
       "valueType": "number"
     },
     {
       "code": "yBalanceAnteriorLeft",
       "name": "Y-Balance voorwaarts (Left)",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "yBalanceAnteriorRight",
       "name": "Y-Balance voorwaarts (Right)",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "ankleDorsiflexionLeft",
       "name": "Enkeldorsaalflexie (Left)",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "ankleDorsiflexionRight",
       "name": "Enkeldorsaalflexie (Right)",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "singleLegSquatLeft",
       "name": "Éénbeenshurk (Left)",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "singleLegSquatRight",
       "name": "Éénbeenshurk (Right)",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "singleLegHopDistanceLeft",
       "name": "Éénbeen Hopdistantie (Left)",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "singleLegHopDistanceRight",
       "name": "Éénbeen Hopdistantie (Right)",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "singleLegBalanceLeft",
       "name": "Éénbeenstand (Left)",
-      "units": [
-        "s"
-      ],
+      "units": ["s"],
       "valueType": "number"
     },
     {
       "code": "singleLegBalanceRight",
       "name": "Éénbeenstand (Right)",
-      "units": [
-        "s"
-      ],
+      "units": ["s"],
       "valueType": "number"
     },
     {
       "code": "hipInternalRotationLeft",
       "name": "Heup Inwaartse Rotatie (Left)",
-      "units": [
-        "graden"
-      ],
+      "units": ["graden"],
       "valueType": "number"
     },
     {
       "code": "hipInternalRotationRight",
       "name": "Heup Inwaartse Rotatie (Right)",
-      "units": [
-        "graden"
-      ],
+      "units": ["graden"],
       "valueType": "number"
     },
     {
       "code": "rotationPatternLeft",
       "name": "Bird Dog (Left)",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "rotationPatternRight",
       "name": "Bird Dog (Right)",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "loadTransferLeft",
       "name": "Rechte Beenhef (ASLR) (Left)",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "loadTransferRight",
       "name": "Rechte Beenhef (ASLR) (Right)",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "carryPatternLeft",
       "name": "Farmer Carry (Left)",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "carryPatternRight",
       "name": "Farmer Carry (Right)",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "overheadLungeWalkLeft",
       "name": "Éénarm Overhead Uitvalspas (Left)",
-      "units": [
-        "stappen 0-3"
-      ],
+      "units": ["stappen 0-3"],
       "valueType": "number"
     },
     {
       "code": "overheadLungeWalkRight",
       "name": "Éénarm Overhead Uitvalspas (Right)",
-      "units": [
-        "stappen 0-3"
-      ],
+      "units": ["stappen 0-3"],
       "valueType": "number"
     },
     {
       "code": "thoracicRotationLeft",
       "name": "Thoracale Rotatie (Left)",
-      "units": [
-        "graden"
-      ],
+      "units": ["graden"],
       "valueType": "number"
     },
     {
       "code": "thoracicRotationRight",
       "name": "Thoracale Rotatie (Right)",
-      "units": [
-        "graden"
-      ],
+      "units": ["graden"],
       "valueType": "number"
     },
     {
       "code": "thomasTestLeft",
       "name": "Thomas Test (Left)",
-      "units": [
-        "graden"
-      ],
+      "units": ["graden"],
       "valueType": "number"
     },
     {
       "code": "thomasTestRight",
       "name": "Thomas Test (Right)",
-      "units": [
-        "graden"
-      ],
+      "units": ["graden"],
       "valueType": "number"
     },
     {
       "code": "biologicalAge",
       "name": "Biologische Leeftijd",
-      "units": [
-        "jaren"
-      ],
+      "units": ["jaren"],
       "valueType": "number"
     },
     {
       "code": "phenologicalAge",
       "name": "Fenologische Leeftijd",
-      "units": [
-        "jaren"
-      ],
+      "units": ["jaren"],
       "valueType": "number"
     },
     {
       "code": "vitalReserve",
       "name": "Biologische Veerkracht",
-      "units": [
-        "%"
-      ],
+      "units": ["%"],
       "valueType": "number"
     },
     {
       "code": "dataQuality",
       "name": "Data Kwaliteit",
-      "units": [
-        "%"
-      ],
+      "units": ["%"],
       "valueType": "number"
     },
     {
       "code": "birthYear",
       "name": "Geboortejaar",
-      "units": [
-        "year"
-      ],
+      "units": ["year"],
       "valueType": "number"
     },
     {
@@ -458,49 +339,37 @@ Generated from the private runtime manifest source with timestamp 2026-06-17T00:
     {
       "code": "height",
       "name": "Lengte",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "bodyWeight",
       "name": "Gewicht",
-      "units": [
-        "kg"
-      ],
+      "units": ["kg"],
       "valueType": "number"
     },
     {
       "code": "waistCircumference",
       "name": "Middelomtrek",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "hipCircumference",
       "name": "Heupomtrek",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "wristCircumference",
       "name": "Polsomtrek",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "ankleCircumference",
       "name": "Enkelomtrek",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
@@ -518,873 +387,655 @@ Generated from the private runtime manifest source with timestamp 2026-06-17T00:
     {
       "code": "creatinine",
       "name": "Creatinine",
-      "units": [
-        "mg/dL"
-      ],
+      "units": ["mg/dL"],
       "valueType": "number"
     },
     {
       "code": "albumin",
       "name": "Albumine",
-      "units": [
-        "g/dL"
-      ],
+      "units": ["g/dL"],
       "valueType": "number"
     },
     {
       "code": "hba1c",
       "name": "HbA1c",
-      "units": [
-        "%"
-      ],
+      "units": ["%"],
       "valueType": "number"
     },
     {
       "code": "apoB",
       "name": "Apo-B",
-      "units": [
-        "g/L"
-      ],
+      "units": ["g/L"],
       "valueType": "number"
     },
     {
       "code": "glucose",
       "name": "Nuchter Glucose",
-      "units": [
-        "mg/dL"
-      ],
+      "units": ["mg/dL"],
       "valueType": "number"
     },
     {
       "code": "hsCRP",
       "name": "hs-CRP",
-      "units": [
-        "mg/L"
-      ],
+      "units": ["mg/L"],
       "valueType": "number"
     },
     {
       "code": "insulin",
       "name": "Nuchter Insuline",
-      "units": [
-        "μU/mL"
-      ],
+      "units": ["μU/mL"],
       "valueType": "number"
     },
     {
       "code": "insulinResistance",
       "name": "HOMA-IR",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "triglycerides",
       "name": "Triglycerides",
-      "units": [
-        "mmol/L"
-      ],
+      "units": ["mmol/L"],
       "valueType": "number"
     },
     {
       "code": "ldlCholesterol",
       "name": "LDL-C",
-      "units": [
-        "mmol/L"
-      ],
+      "units": ["mmol/L"],
       "valueType": "number"
     },
     {
       "code": "hdlCholesterol",
       "name": "HDL-C",
-      "units": [
-        "mmol/L"
-      ],
+      "units": ["mmol/L"],
       "valueType": "number"
     },
     {
       "code": "totalCholesterol",
       "name": "Cholesterol",
-      "units": [
-        "mmol/L"
-      ],
+      "units": ["mmol/L"],
       "valueType": "number"
     },
     {
       "code": "crp",
       "name": "CRP",
-      "units": [
-        "mg/L"
-      ],
+      "units": ["mg/L"],
       "valueType": "number"
     },
     {
       "code": "atherogenicIndex",
       "name": "Atherogenische Index",
-      "units": [
-        "ratio"
-      ],
+      "units": ["ratio"],
       "valueType": "number"
     },
     {
       "code": "remnantCholesterol",
       "name": "Remnant Cholesterol",
-      "units": [
-        "mmol/L"
-      ],
+      "units": ["mmol/L"],
       "valueType": "number"
     },
     {
       "code": "totalTestosterone",
       "name": "Totale Testosteron",
-      "units": [
-        "nmol/L"
-      ],
+      "units": ["nmol/L"],
       "valueType": "number"
     },
     {
       "code": "freeTestosterone",
       "name": "Vrij Testosteron",
-      "units": [
-        "pmol/L"
-      ],
+      "units": ["pmol/L"],
       "valueType": "number"
     },
     {
       "code": "vitaminD",
       "name": "Vitamin D (25-OH)",
-      "units": [
-        "nmol/L"
-      ],
+      "units": ["nmol/L"],
       "valueType": "number"
     },
     {
       "code": "estradiol",
       "name": "Estradiol (E2)",
-      "units": [
-        "pmol/L"
-      ],
+      "units": ["pmol/L"],
       "valueType": "number"
     },
     {
       "code": "homocysteine",
       "name": "Homocysteine",
-      "units": [
-        "µmol/L"
-      ],
+      "units": ["µmol/L"],
       "valueType": "number"
     },
     {
       "code": "tsh",
       "name": "Thyroide Hormoon",
-      "units": [
-        "mIU/L"
-      ],
+      "units": ["mIU/L"],
       "valueType": "number"
     },
     {
       "code": "ggt",
       "name": "GGT",
-      "units": [
-        "U/L"
-      ],
+      "units": ["U/L"],
       "valueType": "number"
     },
     {
       "code": "uricAcid",
       "name": "Urinezuur",
-      "units": [
-        "mg/dL"
-      ],
+      "units": ["mg/dL"],
       "valueType": "number"
     },
     {
       "code": "alkalinePhosphatase",
       "name": "Alkalische Fosfatase",
-      "units": [
-        "U/L"
-      ],
+      "units": ["U/L"],
       "valueType": "number"
     },
     {
       "code": "wbc",
       "name": "Witte Bloedcellen",
-      "units": [
-        "10³/μL"
-      ],
+      "units": ["10³/μL"],
       "valueType": "number"
     },
     {
       "code": "lymphocytePercent",
       "name": "Lymfocyten %",
-      "units": [
-        "%"
-      ],
+      "units": ["%"],
       "valueType": "number"
     },
     {
       "code": "rdw",
       "name": "RDW",
-      "units": [
-        "%"
-      ],
+      "units": ["%"],
       "valueType": "number"
     },
     {
       "code": "mcv",
       "name": "MCV",
-      "units": [
-        "fL"
-      ],
+      "units": ["fL"],
       "valueType": "number"
     },
     {
       "code": "ntProBNP",
       "name": "NT-proBNP",
-      "units": [
-        "pg/mL"
-      ],
+      "units": ["pg/mL"],
       "valueType": "number"
     },
     {
       "code": "nlr",
       "name": "NLR",
-      "units": [
-        "ratio"
-      ],
+      "units": ["ratio"],
       "valueType": "number"
     },
     {
       "code": "gdf15",
       "name": "GDF-15",
-      "units": [
-        "ng/L"
-      ],
+      "units": ["ng/L"],
       "valueType": "number"
     },
     {
       "code": "lpA",
       "name": "Lipoproteïne (a)",
-      "units": [
-        "mg/dL"
-      ],
+      "units": ["mg/dL"],
       "valueType": "number"
     },
     {
       "code": "ferritin",
       "name": "Ferritine",
-      "units": [
-        "ng/mL"
-      ],
+      "units": ["ng/mL"],
       "valueType": "number"
     },
     {
       "code": "omega3Index",
       "name": "Omega-3 Index",
-      "units": [
-        "%"
-      ],
+      "units": ["%"],
       "valueType": "number"
     },
     {
       "code": "cystatinC",
       "name": "Cystatin C",
-      "units": [
-        "mg/L"
-      ],
+      "units": ["mg/L"],
       "valueType": "number"
     },
     {
       "code": "suPAR",
       "name": "suPAR",
-      "units": [
-        "ng/mL"
-      ],
+      "units": ["ng/mL"],
       "valueType": "number"
     },
     {
       "code": "dunedinPACE",
       "name": "DunedinPACE",
-      "units": [
-        "years/year"
-      ],
+      "units": ["years/year"],
       "valueType": "number"
     },
     {
       "code": "systolicBP",
       "name": "Systolische druk",
-      "units": [
-        "mmHg"
-      ],
+      "units": ["mmHg"],
       "valueType": "number"
     },
     {
       "code": "diastolicBP",
       "name": "Diastolische druk",
-      "units": [
-        "mmHg"
-      ],
+      "units": ["mmHg"],
       "valueType": "number"
     },
     {
       "code": "restingHR",
       "name": "Rusthartslag",
-      "units": [
-        "bpm"
-      ],
+      "units": ["bpm"],
       "valueType": "number"
     },
     {
       "code": "hrvRMSSD",
       "name": "HRV (RMSSD)",
-      "units": [
-        "ms"
-      ],
+      "units": ["ms"],
       "valueType": "number"
     },
     {
       "code": "bodyFat",
       "name": "Vetpercentage",
-      "units": [
-        "%"
-      ],
+      "units": ["%"],
       "valueType": "number"
     },
     {
       "code": "muscleMass",
       "name": "Spiermassa",
-      "units": [
-        "kg"
-      ],
+      "units": ["kg"],
       "valueType": "number"
     },
     {
       "code": "waistHipRatio",
       "name": "Middel-Heup Ratio",
-      "units": [
-        "ratio"
-      ],
+      "units": ["ratio"],
       "valueType": "number"
     },
     {
       "code": "waistToHeightRatio",
       "name": "Taille-Lengte Ratio",
-      "units": [
-        "ratio"
-      ],
+      "units": ["ratio"],
       "valueType": "number"
     },
     {
       "code": "visceralFat",
       "name": "Visceraal vet",
-      "units": [
-        "cm²"
-      ],
+      "units": ["cm²"],
       "valueType": "number"
     },
     {
       "code": "heartRateRecovery",
       "name": "Hartslag Herstel",
-      "units": [
-        "bpm"
-      ],
+      "units": ["bpm"],
       "valueType": "number"
     },
     {
       "code": "vo2max",
       "name": "VO₂max",
-      "units": [
-        "ml/kg/min"
-      ],
+      "units": ["ml/kg/min"],
       "valueType": "number"
     },
     {
       "code": "cooperTest",
       "name": "Cooper Test",
-      "units": [
-        "m / 12 min"
-      ],
+      "units": ["m / 12 min"],
       "valueType": "number"
     },
     {
       "code": "ftpBike",
       "name": "FTP (Bike)",
-      "units": [
-        "W"
-      ],
+      "units": ["W"],
       "valueType": "number"
     },
     {
       "code": "row2000m",
       "name": "2000m Roeien",
-      "units": [
-        "mm:ss"
-      ],
+      "units": ["mm:ss"],
       "valueType": "number"
     },
     {
       "code": "handgrip",
       "name": "Handkracht",
-      "units": [
-        "kg"
-      ],
+      "units": ["kg"],
       "valueType": "number"
     },
     {
       "code": "pushup",
       "name": "Push-up Test",
-      "units": [
-        "reps"
-      ],
+      "units": ["reps"],
       "valueType": "number"
     },
     {
       "code": "chairStand",
       "name": "Chair-Stand Test",
-      "units": [
-        "reps"
-      ],
+      "units": ["reps"],
       "valueType": "number"
     },
     {
       "code": "armCurl",
       "name": "Arm Buig Test",
-      "units": [
-        "reps"
-      ],
+      "units": ["reps"],
       "valueType": "number"
     },
     {
       "code": "stroke7Row",
       "name": "7 Stroke Row Challenge",
-      "units": [
-        "W"
-      ],
+      "units": ["W"],
       "valueType": "number"
     },
     {
       "code": "legPress",
       "name": "Leg Press",
-      "units": [
-        "kg"
-      ],
+      "units": ["kg"],
       "valueType": "number"
     },
     {
       "code": "neuromuscularStrengthIndex",
       "name": "Neuromusculaire Krachtindex",
-      "units": [
-        "z"
-      ],
+      "units": ["z"],
       "valueType": "number"
     },
     {
       "code": "dotsScore",
       "name": "Kracht Score",
-      "units": [
-        "points"
-      ],
+      "units": ["points"],
       "valueType": "number"
     },
     {
       "code": "upAndGo",
       "name": "Timed Up-and-Go Test",
-      "units": [
-        "seconds"
-      ],
+      "units": ["seconds"],
       "valueType": "number"
     },
     {
       "code": "sitAndReach",
       "name": "Sit-and-Reach Test",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "breathHoldBolt",
       "name": "BOLT",
-      "units": [
-        "seconds"
-      ],
+      "units": ["seconds"],
       "valueType": "number"
     },
     {
       "code": "dsst",
       "name": "DSS-Test",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
       "code": "trailMakingB",
       "name": "Trail Making Test B",
-      "units": [
-        "seconds"
-      ],
+      "units": ["seconds"],
       "valueType": "number"
     },
     {
       "code": "reactionTime",
       "name": "Reactie Tijd",
-      "units": [
-        "ms"
-      ],
+      "units": ["ms"],
       "valueType": "number"
     },
     {
       "code": "digitSpanBackward",
       "name": "Digit Span Backward",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
       "code": "verbalFluency",
       "name": "Verbal Fluency Test",
-      "units": [
-        "words/min"
-      ],
+      "units": ["words/min"],
       "valueType": "number"
     },
     {
       "code": "corsiBlockSpan",
       "name": "Corsi Block Span",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
       "code": "stroopInterference",
       "name": "Stroop Test (100 incongruent trials)",
-      "units": [
-        "seconds"
-      ],
+      "units": ["seconds"],
       "valueType": "number"
     },
     {
       "code": "fingerTapping",
       "name": "Finger Tapping Test",
-      "units": [
-        "Hz"
-      ],
+      "units": ["Hz"],
       "valueType": "number"
     },
     {
       "code": "srhScore",
       "name": "Zelfgemeten gezondheid",
-      "units": [
-        "/100"
-      ],
+      "units": ["/100"],
       "valueType": "number"
     },
     {
       "code": "dailySteps",
       "name": "Stapteller",
-      "units": [
-        "steps/day"
-      ],
+      "units": ["steps/day"],
       "valueType": "number"
     },
     {
       "code": "lifestyleExercise",
       "name": "Sport",
-      "units": [
-        "/100"
-      ],
+      "units": ["/100"],
       "valueType": "number"
     },
     {
       "code": "lifestyle",
       "name": "Leefstijl",
-      "units": [
-        "/100"
-      ],
+      "units": ["/100"],
       "valueType": "number"
     },
     {
       "code": "synergyPlaqueRupture",
       "name": "Aderverkalking & ontsteking",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyEndothelialDamage",
       "name": "Vaatschade door suiker & roken",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyPlaqueInstability",
       "name": "Hart onder druk bij ontsteking",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyAIP",
       "name": "Atherogene index",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyMetabolicCompensation",
       "name": "Verborgen insulineresistentie",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyInflammatoryLoad",
       "name": "Dubbele ontstekingsbelasting",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyChronicInflammation",
       "name": "Leefstijl-gedreven ontsteking",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyMetabolicInflexibility",
       "name": "Verstoorde stofwisseling",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyPlaqueVulnerability",
       "name": "Vaatrisico door roken",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyAutonomicBurnout",
       "name": "Stresshart-risico",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyLiverStress",
       "name": "Lever onder druk",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyJunkVolumeMetabolism",
       "name": "Ineffectief trainingspatroon",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyCatabolicOvertraining",
       "name": "Overbelasting zonder herstel",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyIneffectiveStrength",
       "name": "Onbenut krachtpotentieel",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyCardioResidualRisk",
       "name": "Krachttraining zonder conditie",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyAntioxidantOverload",
       "name": "Antioxidant-stack overload",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "synergyBiomechanicalWear",
       "name": "Overbelaste gewrichten",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeAthlete",
       "name": "Sporthart Fenotype",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypePathology",
       "name": "Pathologische Bradycardie",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeMuscularAthlete",
       "name": "Spiermassa Fenotype",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeRenalRisk",
       "name": "Nierfunctie Risico",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeLeanAthlete",
       "name": "Slank & Fit Fenotype",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeFrailty",
       "name": "Kwetsbaarheid (Frailty) Fenotype",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypePowerAthlete",
       "name": "Krachtsporter Fenotype",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeMetabolicSyndrome",
       "name": "Metabool Syndroom",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeBenignLDL",
       "name": "Groot LDL Fenotype",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeAtherogenicLDL",
       "name": "Atherogeen LDL Fenotype",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeInsulinSensitive",
       "name": "Insulinegevoelig Fenotype",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeHypoglycemiaRisk",
       "name": "Hypoglykemie Risico",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeAthleteBP",
       "name": "Sportief Lage Bloeddruk",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeAutonomicFrailty",
       "name": "Autonome Disregulatie",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeEliteLipids",
       "name": "Optimaal Lipidenprofiel",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeHealthyHighHDL",
       "name": "Functioneel Hoog HDL",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeMetabolicClean",
       "name": "Metabole Efficiëntie",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
       "code": "phenotypeSmokerAntioxidant",
       "name": "Roker met antioxidant-suppletie",
-      "units": [
-        "Index"
-      ],
+      "units": ["Index"],
       "valueType": "number"
     },
     {
@@ -1432,121 +1083,91 @@ Generated from the private runtime manifest source with timestamp 2026-06-17T00:
     {
       "code": "singleLegCalfRaises",
       "name": "Single Leg Calf Raises",
-      "units": [
-        "reps"
-      ],
+      "units": ["reps"],
       "valueType": "number"
     },
     {
       "code": "backSquat",
       "name": "Kniebuig",
-      "units": [
-        "kg"
-      ],
+      "units": ["kg"],
       "valueType": "number"
     },
     {
       "code": "deadLift",
       "name": "Deadlift",
-      "units": [
-        "kg"
-      ],
+      "units": ["kg"],
       "valueType": "number"
     },
     {
       "code": "benchPress",
       "name": "Bench Press",
-      "units": [
-        "kg"
-      ],
+      "units": ["kg"],
       "valueType": "number"
     },
     {
       "code": "overheadPress",
       "name": "Military Press",
-      "units": [
-        "kg"
-      ],
+      "units": ["kg"],
       "valueType": "number"
     },
     {
       "code": "standingLongJump",
       "name": "Staande Versprong",
-      "units": [
-        "cm"
-      ],
+      "units": ["cm"],
       "valueType": "number"
     },
     {
       "code": "oneMinRow",
       "name": "1-Minuut Roeien",
-      "units": [
-        "m"
-      ],
+      "units": ["m"],
       "valueType": "number"
     },
     {
       "code": "maxRpmBike",
       "name": "Max RPM Fiets",
-      "units": [
-        "rpm"
-      ],
+      "units": ["rpm"],
       "valueType": "number"
     },
     {
       "code": "oneMinBike",
       "name": "1-Minuut Fiets",
-      "units": [
-        "m"
-      ],
+      "units": ["m"],
       "valueType": "number"
     },
     {
       "code": "maxPowerBike",
       "name": "Max Power Fiets",
-      "units": [
-        "W"
-      ],
+      "units": ["W"],
       "valueType": "number"
     },
     {
       "code": "maxPowerCrossTrainer",
       "name": "Max Power Cross-Trainer",
-      "units": [
-        "W"
-      ],
+      "units": ["W"],
       "valueType": "number"
     },
     {
       "code": "oneMinCrossTrainer",
       "name": "1-Minuut Cross-Trainer",
-      "units": [
-        "W"
-      ],
+      "units": ["W"],
       "valueType": "number"
     },
     {
       "code": "twelveMinCrossTrainer",
       "name": "12-Minuten Cross-Trainer",
-      "units": [
-        "m"
-      ],
+      "units": ["m"],
       "valueType": "number"
     },
     {
       "code": "overheadSquat",
       "name": "Overhead Squat",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
       "code": "dumbbellLunge",
       "name": "Dumbbell Lunge",
-      "units": [
-        "score 0-3"
-      ],
+      "units": ["score 0-3"],
       "valueType": "number"
     },
     {
@@ -1726,273 +1347,205 @@ Generated from the private runtime manifest source with timestamp 2026-06-17T00:
     {
       "code": "tobaccoUse",
       "name": "Tabaksgebruik",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "dietQuality",
       "name": "Voedingspatroon",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "bodyComposition",
       "name": "Lichaamssamenstelling",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "dailyMovement",
       "name": "Dagelijkse activiteit",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "alcoholUse",
       "name": "Alcoholgebruik",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "regularexercise",
       "name": "Regelmatig bewegen",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "strengthtraining",
       "name": "Krachttraining",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "regularnuts",
       "name": "Regelmatig noten eten",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "sleepHours",
       "name": "Slaapduur",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "socialIntegration",
       "name": "Sociale verbinding",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "stressRegulation",
       "name": "Stressregulatie",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "regularsauna",
       "name": "Regelmatig saunabezoek",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "purposemeaning",
       "name": "Zingeving en levensdoel",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "optimism",
       "name": "Optimistische levenshouding",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "regularcoffee",
       "name": "Regelmatig koffie (matig)",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "shiftwork",
       "name": "Onregelmatige diensten / nachtdienst",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "mealRhythm",
       "name": "Eetritme",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "medicalCare",
       "name": "Medische preventieve zorg",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "financialsecurity",
       "name": "Financiële zekerheid",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "sunexposure",
       "name": "Regelmatige blootstelling aan daglicht",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "greenspace",
       "name": "Regelmatige blootstelling aan natuur",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "cognitivestimulation",
       "name": "Leren en persoonlijke groei",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "mentalstillness",
       "name": "Mentale rust / meditatie",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "goodhygiene",
       "name": "Goede persoonlijke hygiëne",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "lowfatdiet",
       "name": "Vetarm dieet (onvoldoende gezonde vetten)",
-      "units": [
-        "bool"
-      ],
+      "units": ["bool"],
       "valueType": "number"
     },
     {
       "code": "lifestyleDiet",
       "name": "Voeding & dieet",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
       "code": "lifestyleMovement",
       "name": "Beweging & sport",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
       "code": "lifestyleSleep",
       "name": "Slaap & herstel",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
       "code": "lifestyleMindfulness",
       "name": "Mindfulness & stress",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
       "code": "lifestyleCognition",
       "name": "Leren & cognitie",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
       "code": "lifestyleSocial",
       "name": "Sociale verbinding",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
       "code": "lifestyleSubstances",
       "name": "Genotmiddelen",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
       "code": "lifestyleCircadian",
       "name": "Circadiaan & buitenlucht",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
       "code": "lifestyleHealthcare",
       "name": "lifestyleHealthcare",
-      "units": [
-        "score"
-      ],
+      "units": ["score"],
       "valueType": "number"
     },
     {
