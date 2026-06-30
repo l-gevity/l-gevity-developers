@@ -1,4 +1,4 @@
-# L-GEVITY Developers
+# L-GEVITY REST-API for Developers
 
 The L-GEVITY API lets backend applications submit biomarker measurements and
 receive structured longevity analysis over HTTP JSON. Integrations can fetch the
