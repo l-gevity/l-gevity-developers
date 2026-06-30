@@ -70,25 +70,37 @@ Acceptance:  https://api.acceptance.l-gevity.nl
 ## API Functionality
 
 The public API exposes the biometric assessment layer of L-GEVITY's longevity
-platform. It is built for backend systems that already collect health
-measurements and need structured engine output without embedding the L-GEVITY
-engine.
+platform. It turns submitted measurements into structured health, risk, and data
+quality outputs that another backend can store, display, or analyze.
 
-The workflow follows the product flow from measurement to interpretation:
+Accepted input types include:
 
-1. Discover supported biomarker inputs with `GET /v1/manifest`. The manifest
-   lists the input codes, display names, units, and value types that clients can
-   use to build validation and mapping logic.
-2. Submit measured values with `POST /v1/biometric-assessments`. The API accepts
-   blood values, body composition, fitness, cognition, movement, and lifestyle
-   biomarkers when they are available.
-3. Receive a machine-readable assessment. The response includes a compact
-   `biologicalValue`, a `dataCurrency` signal, ranked `riskBands`, and the
-   detailed `engineResult` for deeper analytics.
+| Input type                  | Examples                                                               |
+| --------------------------- | ---------------------------------------------------------------------- |
+| Demographics                | `birthYear`, `gender`                                                  |
+| Body composition            | `height`, `bodyWeight`, `waistCircumference`, `waistToHeightRatio`     |
+| Blood pressure              | `systolicBP`, `diastolicBP`                                            |
+| Blood and metabolic markers | `ldlCholesterol`, `hdlCholesterol`, `triglycerides`, `hba1c`, `hsCRP` |
+| Fitness and activity        | `vo2max`, `dailySteps`, training and movement test values              |
+| Sleep and lifestyle         | `sleepHours`, lifestyle and subjective health fields from the manifest |
+| Cognitive and mobility data | Cognitive test, balance, mobility, and musculoskeletal measurements    |
+
+Calculated output types include:
+
+| Output type                        | Response fields                                                                 |
+| ---------------------------------- | ------------------------------------------------------------------------------- |
+| Compact assessment                 | `biologicalValue`, `dataCurrency`, `riskBands`                                  |
+| Domain scores                      | `engineResult.scores`, including health, cardiovascular, metabolic, and fitness signals |
+| Relative risk and impact           | `engineResult.riskReductions`, `ageDeltas`, `impactScores`, `oddsRatios`        |
+| Population comparison              | `engineResult.percentiles`, `virtualBiomarkerPercentiles`                       |
+| Derived biometrics                 | `engineResult.derivedBiometrics`, such as `waistToHeightRatio`, `phenologicalAge`, `allostaticLoad`, and `dataQuality` |
+| Virtual biomarker domains          | `engineResult.virtualBiomarkerResults`, such as `cardioRespiratory`, `metabolicControl`, `lipidology`, `bodyComposition`, `stress`, and `lgevityBloedTest` |
+| Optimality and timing hints        | `engineResult.deviationFromOptimal`, `expectedDurations`, `expirations`         |
+| Detailed engine-native diagnostics | `engineResult.metadata`, `pheno`, `tierInfo`, and `errors` when present         |
 
 The API is intentionally stateless from the integrator's point of view: each
-assessment is calculated from the submitted payload, and the public contract does
-not expose account, profile, billing, or action-planning workflows.
+assessment is calculated from the submitted payload, and available calculations
+depend on which biomarker values are present.
 
 The API is designed for server-to-server use. Keep API keys on your backend; do
 not put them in browser JavaScript, mobile apps, public repositories, logs, or
